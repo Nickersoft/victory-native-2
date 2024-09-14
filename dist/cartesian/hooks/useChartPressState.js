@@ -51,6 +51,6 @@ const useIsPressActive = (value) => {
     (0, react_native_reanimated_1.useAnimatedReaction)(() => value.isActive.value, (val, oldVal) => {
         if (val !== oldVal)
             (0, react_native_reanimated_1.runOnJS)(setIsPressActive)(val);
-    });
+    }, [value.isActive]);
     return isPressActive;
 };
